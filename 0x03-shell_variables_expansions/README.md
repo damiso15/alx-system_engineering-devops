@@ -14,3 +14,5 @@ This is my Readme file for ALX Assignment 0x03-shell_variables_expansions
 * 11-binary_to_decimal - There are 10 types of people in the world -- Those who understand binary, and those who don't
 * 12-combinations - Create a script that prints all possible combinations of two letters, except oo.
 * 13-print_float - Write a script that prints a number with two decimal places, followed by a new line.
+* 100-decimal_to_hexadecimal - Write a script that converts a number from base 10 to base 16.
+* 101-rot13 - Write a script that encodes and decodes text using the rot13 encryption. Assume ASCII.

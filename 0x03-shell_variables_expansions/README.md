@@ -12,3 +12,5 @@ This is my Readme file for ALX Assignment 0x03-shell_variables_expansions
 * 9-divide_and_rule - Write a script that prints the result of POWER divided by DIVIDE, followed by a new line.
 * 10-love_exponent_breath - Write a script that displays the result of BREATH to the power LOVE
 * 11-binary_to_decimal - There are 10 types of people in the world -- Those who understand binary, and those who don't
+* 12-combinations - Create a script that prints all possible combinations of two letters, except oo.
+* 13-print_float - Write a script that prints a number with two decimal places, followed by a new line.

@@ -7,7 +7,6 @@
 num1=0
 num2=10
 while [ $num1 -lt $num2 ]; do
-        printf "Best School\n"
         ((num1++))
 
 	if [ $num1 == 4 ]
@@ -16,5 +15,7 @@ while [ $num1 -lt $num2 ]; do
 	elif [ $num1 == 8  ]
 	then
 		printf "good luck\n"
+	else
+		printf "Best School\n"
 	fi
 done

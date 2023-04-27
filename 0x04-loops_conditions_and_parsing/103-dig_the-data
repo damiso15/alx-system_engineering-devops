@@ -2,4 +2,4 @@
 # A script that groups visitors by IP and HTTP status code, and displays this data
 
 log_file="./apache-access.log"
-awk '{ ip_status[$1" "$9]++ } END { for (i in ip_status) print ip_status[i], i }' "$log_file" | sort -rn | head -n 10
+awk '{ ip_status[$1" "$9]++ } END { for (i in ip_status) print "%16d %s\n", ip_status[i], i }' "$log_file" | sort -rn | head -n 10

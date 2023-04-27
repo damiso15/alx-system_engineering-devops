@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script is displaying "Best School" 10 times
 
-num1=0
+num1=1
 num2=10
 until [ $num1 -gt $num2 ]; do
         printf "Best School\n"

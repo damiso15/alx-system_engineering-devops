@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# A script that displays numbers from 1 to 100.
+
+for num in {1..100}; do
+	if [ $((num % 3)) -eq 0 ] && [ $((num % 5)) -eq 0 ]
+        then
+                printf "FizzBuzz\n"
+	elif [ $((num % 3)) -eq 0 ]
+	then
+		printf "Fizz\n"
+	elif [ $((num % 5)) -eq 0 ]
+	then
+		printf "Buzz\n"
+	else
+		printf "%d\n" "$num"
+	fi
+        ((num++))
+done

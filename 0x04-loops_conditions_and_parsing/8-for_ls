@@ -5,5 +5,8 @@
 # Where only the part of the name after the first dash is displayed
 
 for item in *; do
-	ls "$item" | cut -f2  -d"-";
+	if [ -f "$item" ];
+	then
+		ls "$item" | cut -f2  -d"-"
+	fi
 done	

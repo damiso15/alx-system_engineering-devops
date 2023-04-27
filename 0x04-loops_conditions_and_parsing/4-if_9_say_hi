@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times
+# but for the 9th iteration, displays Best School and then Hi on a new line
+
+num1=0
+num2=10
+while [ $num1 -lt $num2 ]; do
+        printf "Best School\n"
+        ((num1++))
+
+	if [ $num1 == 9 ]
+	then
+		printf "Hi\n"
+	fi
+done

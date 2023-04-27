@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# A script that displays the time for 12 hours and 59 minutes
+# display hours from 0 to 12
+# display minutes from 1 to 59
+
+
+hour_counter=0
+hour_max=12
+minutes_max=59
+
+while [ $hour_counter -le $hour_max  ]; do
+	printf "Hour: %d\n" "$hour_counter"
+
+	minutes_counter=1
+	while [ $minutes_counter -le $minutes_max ]; do
+		printf "%d\n" "$minutes_counter"
+		((minutes_counter++))
+	done
+	((hour_counter++))
+done

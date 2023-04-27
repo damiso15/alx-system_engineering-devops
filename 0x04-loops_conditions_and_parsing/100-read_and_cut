@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# A script that displays the content of the file /etc/passwd.
+
+cond=true
+file="/etc/passwd"
+while $cond; do
+	cut -f1,3,6 -d ":" "$file"
+	cond=false
+done

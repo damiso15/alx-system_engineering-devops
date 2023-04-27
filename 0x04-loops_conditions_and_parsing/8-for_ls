@@ -7,6 +7,6 @@
 for item in *; do
 	if [ -f "$item" ];
 	then
-		ls "$item" | cut -f2  -d"-"
+		find "$item" | cut -f2  -d"-"
 	fi
 done	

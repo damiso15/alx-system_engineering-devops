@@ -3,7 +3,7 @@
 
 num1=0
 num2=10
-while [ $num1 -lt $num2 ]; do
+until [ $num1 -lt $num2 ]; do
         printf "Best School\n"
         num1=$((num1+1))
 done

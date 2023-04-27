@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times
+
+num1=0
+num2=10
+while [ $num1 -lt $num2 ]; do
+	printf "Best School\n"
+	((num1++))
+done

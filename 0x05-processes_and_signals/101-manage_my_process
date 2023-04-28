@@ -9,7 +9,7 @@ fi
 process="/var/run/my_process.pid"
 
 start_process() {
-	./manage_my_process &
+	nohup ./manage_my_process &>/dev/null &
 	echo $! > "$process"
 	printf "manage_my_process started\n"
 	exit 0

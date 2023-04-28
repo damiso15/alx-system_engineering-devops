@@ -33,16 +33,19 @@ restart_process() {
 	exit 0
 }
 
-if [ "$1" == "start" ]
-then
-        start_process
-elif [ "$1" == "stop" ]
-then
-        stop_process
-elif [ "$1" == "restart" ]
-then
-        restart_process
-else
-        printf "Usage: manage_my_process {start|stop|restart}\n"
-        exit 1
-fi
+case $1 in
+  start)
+    start_process
+    ;;
+  stop)
+    stop_process
+    ;;
+  restart)
+    restart_process
+    ;;
+  *)
+    echo "Usage: manage_my_process {start|stop|restart}"
+    exit 1
+    ;;
+esac
+

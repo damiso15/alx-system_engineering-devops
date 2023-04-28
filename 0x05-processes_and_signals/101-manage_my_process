@@ -16,7 +16,7 @@ start_process() {
 
 stop_process() {
 	pid=$(cat "$process")
-	kill "$pid"
+	kill -16 "$pid"
 	rm -f "$process"
 	exit 0
 }

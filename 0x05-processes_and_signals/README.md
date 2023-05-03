@@ -330,7 +330,7 @@ Starting `100-process_and_pid_file` in the terminal #0 and then killing it in th
 
 
 ## 10. Manage my process ##
-[!101](./101.jpg "101")
+![101](./101.jpg "101")
 
 Read:
 

@@ -10,7 +10,7 @@ It is organized from the lowest level to the highest level:
 
 Keep in mind that the OSI model is a concept, it’s not even tangible. The OSI model doesn’t perform any functions in the networking process. It is a conceptual framework so we can better understand complex interactions that are happening. Most of the functionality in the OSI model exists in all communications systems.
 
-[!What_is_OSI_model](./whatisosi.png "What is OSI model")
+![What_is_OSI_model](./whatisosi.png "What is OSI model")
 
 In this project we will mainly focus on:
 
@@ -19,7 +19,7 @@ In this project we will mainly focus on:
 
 The image bellow describes more concretely how you can relate to every level.
 
-[!OSI_model](./OSImodel.jpg "OSI model")
+![OSI_model](./OSImodel.jpg "OSI model")
 
 Questions:
 
@@ -37,7 +37,7 @@ How is the OSI model organized?
 
 
 ## 1. Types of network ##
-[!wan](./wan.jpg "wan")
+![wan](./wan.jpg "wan")
 
 LAN connect local devices together, WAN connects LANs together, and WANs are operating over the Internet.
 
@@ -60,4 +60,22 @@ What network do you use when you browse www.google.com from your smartphone (not
 1. Internet
 2. WAN
 3. LAN
+
+
+## 2. MAC and IP address ##
+![mac](./mac.jpg "MAC Address")
+
+Questions:
+
+What is a MAC address?
+
+1. The name of a network interface
+2. The unique identifier of a network interface
+3. A network interface
+
+What is an IP address?
+
+1. Is to devices connected to a network what postal address is to houses
+2. The unique identifier of a network interface
+3. Is a number that network devices use to connect to networks
 

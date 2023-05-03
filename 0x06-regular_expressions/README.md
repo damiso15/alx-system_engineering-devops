@@ -49,3 +49,11 @@ Requirements:
 * Using the project instructions, create a Ruby script that accepts one argument and pass it to a regular expression matching method
 
 
+## 2. Repetition Token #1 ##
+[!Repetition_Token](./2._Repetition_Token_#1.png "Repetition Token")
+
+Requirements:
+
+* Find the regular expression that will match the above cases
+* Using the project instructions, create a Ruby script that accepts one argument and pass it to a regular expression matching method
+

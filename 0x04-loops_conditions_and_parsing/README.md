@@ -485,7 +485,7 @@ sylvain@ubuntu$
 
 
 ## 12. Tell the story of passwd ##
-[!101-tell_the_story_of_passwd](./101.jpg "101")
+![101-tell_the_story_of_passwd](./101.jpg "101")
 
 Read:
 
@@ -538,7 +538,7 @@ sylvain@ubuntu$
 
 
 ## 13. Let's parse Apache logs ##
-[!awk](./such_awk "awk")
+![awk](./such_awk "awk")
 
 [Apache](https://en.wikipedia.org/wiki/Apache_HTTP_Server) is among the most popular web servers in the world, serving 50% of all active websites, no doubt that you will have to interact with it within your career.
 

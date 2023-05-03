@@ -405,7 +405,7 @@ sylvain@ubuntu$
 
 
 ## 11. Zombie ##
-[!102](./102.jpg "102")
+![102](./102.jpg "102")
 
 Read [what a zombie process is](https://zombieprocess.wordpress.com/what-is-a-zombie-process/).
 

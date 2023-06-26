@@ -1,4 +1,4 @@
-# Equivqlent resources
+# create a file in /tmp
 
 file { 'school':
   ensure  => 'present',

@@ -1,7 +1,7 @@
 # Equivqlent resources
 
 file { '/tmp/school':
-  ensure  => present,
+  ensure  => 'present',
   mode    => '0774',
   owner   => 'www-data',
   group   => 'www-data',

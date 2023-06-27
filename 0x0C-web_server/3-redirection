@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# A script that configures a new Ubuntu machine to respect above requirements
+
+word="Hello World!"
+redirect_path="\n\tlocation /redirect_me {\n\t\treturn 301 https://youtu.be/dQw4w9WgXcQ; \n\t}\n"
+conf_file="/etc/nginx/sites-available/default"
+
+apt-get update
+apt-get install nginx -y
+echo "$word" > /var/www/html/index.nginx-debian.html
+sed -i "37i\ $redirect_path" "$conf_file"
+service nginx restart
+

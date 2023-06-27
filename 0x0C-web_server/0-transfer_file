@@ -8,7 +8,7 @@ ssh_key=$4
 
 
 ssh() {
-	scp -o "StrictHostKeyChecking=no" -i ssh_keysource_file username@destination_ip:~/
+	scp -o "StrictHostKeyChecking=no" -i ssh_key source_file username@destination_ip:~/
 }
 
 if [ "$#" != "4" ]

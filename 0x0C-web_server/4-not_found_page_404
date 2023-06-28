@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# A script that configures a new Ubuntu machine to respect above requirements
+
+redirect_path="\n\tlocation /redirect_me {\n\t\treturn 301 https://youtu.be/dQw4w9WgXcQ; \n\t}\n"
+
+html_pages="/var/www/html/404.html"
+404_error="Ceci n'est pas une page"
+conf_file="/etc/nginx/sites-available/default"
+error_path="\n\terror_page 404 /404.html;\n\tlocation = /404.html {\n\t\tinternal;\n\t}\n"
+
+# Update the server
+apt-get update
+
+# Install Nginx web server
+apt-get install nginx -y
+
+# Create the custom 404 HTML file with the desired content
+echo "$404_error" > "$html_pages"
+
+# Configure Nginx
+sed -i "41i\ $error_path" "$conf_file"
+
+# Restart Nginx service
+service nginx restart

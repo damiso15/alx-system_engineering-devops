@@ -2,7 +2,7 @@
 # Apache
 
 # Set the 'ServerName' directive globally to suppress this message
-echo "Hello Holberton" >> /var/www/html/index.html
+#echo "Hello Holberton" >> /var/www/html/index.html
 
 # Restart Apache
 service apache2 start

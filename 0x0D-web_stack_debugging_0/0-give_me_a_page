@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Apache
+
+# Set the 'ServerName' directive globally to suppress this message
+echo "ServerName localhost" >> /etc/apache2.conf
+
+# Restart Apache
+service apache2 start

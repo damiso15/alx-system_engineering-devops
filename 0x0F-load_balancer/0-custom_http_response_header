@@ -7,7 +7,7 @@ conf_file="/etc/nginx/sites-available/default"
 html_pages="/var/www/html/404.html"
 error_404="Ceci n'est pas une page"
 error_path="\n\terror_page 404 /404.html;\n\tlocation = /404.html {\n\t\tinternal;\n\t}\n"
-custom_header="\n\tadd_header X-Served-By $(hostname);\n"
+custom_header="\n\tadd_header X-Served-By $(hostname);"
 
 # Update and upgrade packages
 sudo apt-get update

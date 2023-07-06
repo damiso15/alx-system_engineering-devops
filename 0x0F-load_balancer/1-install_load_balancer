@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# a Bash script that configures a new Ubuntu machine
+
+# Update and upgrade packages
+sudo apt-get update
+sudo apt-get -y upgrade
+
+# Install HAProxy
+sudo apt-get -y install haproxy
+
+# Configure HAProxy
+sudo sed -i 's/^ENABLED=0/ENABLED=1/' /etc/default/haproxy
+
+# Configure HAProxy backend servers
+sudo bash -c "cat > /etc/haproxy/haproxy.cfg" << EOF
+frontend lb
+    bind *:80
+    mode http
+    default_backend webservers
+
+backend webservers
+    mode http
+    balance roundrobin
+    server web-01 [STUDENT_ID]-web-01:80 check
+    server web-02 [STUDENT_ID]-web-02:80 check
+EOF
+
+# Restart HAProxy
+sudo service haproxy restart

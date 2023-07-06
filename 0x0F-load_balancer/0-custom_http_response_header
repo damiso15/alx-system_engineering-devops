@@ -23,7 +23,6 @@ echo "$error_404" > "$html_pages"
 sed -i "41i\ $error_path" "$conf_file"
 
 # Set the custom response header in Nginx configuration
-# sudo sed -i 's/# server_tokens off;/server_tokens off;\n        add_header X-Served-By $hostname;/g' /etc/nginx/nginx.conf
 sudo sed -i "37i\ $custom_header" /etc/nginx/nginx.conf
 
 # Restart Nginx to apply the changes

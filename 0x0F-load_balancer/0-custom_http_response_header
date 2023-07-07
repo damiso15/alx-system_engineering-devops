@@ -17,10 +17,10 @@ sudo apt-get -y upgrade
 sudo apt-get install -y nginx
 
 # Set the custom configuration
-echo "$string" > /var/www/html/index.nginx-debian.html
-sed -i "37i\ $redirect_path" "$conf_file"
-echo "$error_404" > "$html_pages"
-sed -i "41i\ $error_path" "$conf_file"
+sudo echo "$string" > /var/www/html/index.nginx-debian.html
+sudo sed -i "37i\ $redirect_path" "$conf_file"
+sudo echo "$error_404" > "$html_pages"
+sudo sed -i "41i\ $error_path" "$conf_file"
 
 # Set the custom response header in Nginx configuration
 sudo sed -i "37i\ $custom_header" /etc/nginx/nginx.conf

@@ -28,3 +28,11 @@ vagrant@vagrant:~$
 
 After connecting to the container and fixing whatever needed to be fixed (here is your mission), you can see that curling port 80 return a page that contains `Hello Holberton`. Paste the command(s) you used to fix the issue in your answer file.
 
+
+## 2. Add a custom HTTP header with Puppet ##
+Just as in task #0, we’d like you to automate the task of creating a custom HTTP header response, but with Puppet.
+
+* The name of the custom HTTP header must be `X-Served-By`
+* The value of the custom HTTP header must be the hostname of the server Nginx is running on
+* Write `2-puppet_custom_http_response_header.pp` so that it configures a brand new Ubuntu machine to the requirements asked in this task
+

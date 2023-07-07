@@ -16,14 +16,20 @@ sudo bash -c "cat > /etc/haproxy/haproxy.cfg" << EOF
 frontend lb
     bind *:80
     mode http
+    timeout client 30s
     default_backend webservers
 
 backend webservers
     mode http
     balance roundrobin
-    server web-01 [STUDENT_ID]-web-01:80 check
-    server web-02 [STUDENT_ID]-web-02:80 check
+    timeout server 30s
+    timeout connect 30s
+    server web-01 217377-web-01:80 check
+    server web-02 217377-web-02:80 check
 EOF
+
+# Configure name resolution 
+echo -e "\n100.25.143.147\t217377-web-01\n35.153.194.199\t217377-web-02" >> /etc/hosts
 
 # Restart HAProxy
 sudo service haproxy restart

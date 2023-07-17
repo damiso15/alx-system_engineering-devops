@@ -53,3 +53,17 @@ root@ab6f4542747e:~# nc -z 0 8080 ; echo $?
 0
 root@ab6f4542747e:~#
 ~~~~
+
+
+## 2. 7 lines or less ##
+Using what you did for task #1, make your fix short and sweet.
+
+Requirements:
+
+* Your Bash script must be 7 lines long or less
+* There must be a new line at the end of the file
+* You respect Bash script requirements
+* You cannot use `;`
+* You cannot use `&&`
+* You cannot use `wget`
+* You cannot execute your previous answer file (Do not include the name of the previous script in this one)

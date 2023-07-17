@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Update nginx configuration
+sudo sed -i 's/user  nginx;/user  nginx;\ndaemon off;/' /etc/nginx/nginx.conf
+sudo sed -i 's/# server_names_hash_bucket_size 64;/server_names_hash_bucket_size 64;/' /etc/nginx/nginx.conf
+sudo sed -i '/listen\s*80;/a listen 8080;' /etc/nginx/conf.d/default.conf
+
+# Change ownership of necessary directories
+sudo chown -R nginx:nginx /var/www/html
+sudo chown -R nginx:nginx /var/lib/nginx
+
+# Start nginx service
+sudo service nginx start
+
+# Verify nginx process is running as nginx user
+sudo ps aux | grep 'nginx: worker process' | grep -v grep
+
+# Verify nginx is listening on port 8080
+sudo nc -z 0 8080

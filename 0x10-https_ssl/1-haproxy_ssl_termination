@@ -1,0 +1,25 @@
+global
+    daemon
+    maxconn 256
+
+defaults
+    mode http
+    timeout connect 5000ms
+    timeout client 50000ms
+    timeout server 50000ms
+
+frontend lb-frontend
+    bind *:80
+    bind *:443 ssl crt /etc/haproxy/certs/www.holberton.online.pem
+    reqadd X-Forwarded-Proto:\ https
+    acl url_static path_beg /static /images /javascript /stylesheets
+    acl url_static path_end .jpg .gif .png .css .js
+
+    use_backend lb-backend if !url_static
+    default_backend lb-backend
+
+backend lb-backend
+    balance roundrobin
+    server web-01 web-01.holberton.online:80 check
+    server web-02 web-02.holberton.online:80 check
+

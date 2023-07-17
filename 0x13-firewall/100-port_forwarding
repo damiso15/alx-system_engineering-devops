@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Open the UFW configuration file for editing
+sudo sed -i 's/^#\(.*\)IPV6=yes/\1IPV6=no/' /etc/default/ufw
+
+# Add the NAT rules to redirect port 8080 to port 80
+sudo bash -c 'cat <<EOF > /etc/ufw/before.rules
+*nat
+:PREROUTING ACCEPT [0:0]
+-A PREROUTING -p tcp --dport 8080 -j REDIRECT --to-port 80
+COMMIT
+EOF'
+
+# Enable UFW and allow SSH, HTTP, and HTTPS
+sudo ufw enable
+sudo ufw allow ssh
+sudo ufw allow http
+sudo ufw allow https
+
+# Restart UFW to apply the changes
+sudo ufw reload
+
